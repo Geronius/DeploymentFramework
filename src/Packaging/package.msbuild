@@ -10,6 +10,7 @@
     <Version>5_7_0</Version>
     <InstallerVersion>5.7.100.0</InstallerVersion>
     <ProductID>018C4B8A-B453-49DD-91AD-3B20D0D1D428</ProductID>
+	<AlwaysBuildDocs>False</AlwaysBuildDocs>
   </PropertyGroup>
   
   <PropertyGroup>
@@ -27,8 +28,8 @@
     <MSBuild Projects="..\Tools\BuildTools.msbuild" Properties="Configuration=Release;Platform=Any CPU;ProductVersionFull=$(InstallerVersion)" UseResultsCache="false" UnloadProjectsOnCompletion="true" />
   </Target>
 
-  <Target Name="BuildDocs">
-    <Exec Command="&quot;\Program Files\IBE Software\HelpNDoc\Hnd4.exe&quot; ..\Documentation\Src\DeploymentFrameworkForBizTalkDocs.hnd /g" />
+  <Target Name="BuildDocs" Condition="'$(AlwaysBuildDocs)' == 'True' Or !Exists('..\Documentation\DeploymentFrameworkForBizTalkDocs.chm')">
+    <Exec Command="&quot;$(MSBuildExtensionsPath)\..\IBE Software\HelpNDoc\Hnd4.exe&quot; ..\Documentation\Src\DeploymentFrameworkForBizTalkDocs.hnd /g /silent" />
   </Target>
 
   <Target Name="BuildInstaller" DependsOnTargets="$(BuildInstallerDependsOn)">

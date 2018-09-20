@@ -299,3 +299,4 @@ src/Framework/DeployTools/SSOSettings*
 src/Framework/DeployTools/UACElevate.exe
 src/Framework/BizTalkDeploymentFramework.Tasks*.dll
 src/Framework/Microsoft.Web.Administration.dll
+src/Documentation/Advanced.htm
