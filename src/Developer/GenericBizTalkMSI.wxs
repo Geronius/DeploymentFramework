@@ -6,15 +6,9 @@
     This source file is subject to the Microsoft Public License (Ms-PL).
 -->
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-
-  <?if $(var.AddProductVersionInProductName) ~= True?>
-  <Icon Id="FullProductName" SourceFile="$(var.ProductName) $(var.ProductVersion)" />
-  <?else?>
-  <Icon Id="FullProductName" SourceFile="$(var.ProductName)" />
-  <?endif?>
   
   <Product UpgradeCode="$(var.ProductUpgradeCode)"
-           Name="$(var.FullProductName)"
+		   Name="$(var.ProductName) $(var.ProductVersion)" 
            Id="$(var.ProductId)"
            Version="$(var.ProductVersion)"
            Manufacturer="$(var.Manufacturer)"
@@ -40,11 +34,9 @@
       </Directory>
       <?endif?>
       <Directory Id="ProgramFilesFolder" Name="ProgramFiles">
-	  <?if $(var.CreateManufacturerDir) ~= True?><Directory Id="ManufacturerDir" Name="$(var.Manufacturer)"><?endif?>
         <Directory Id="ProductDir" Name="$(var.ProductName)">
           <Directory Id="INSTALLDIR" Name="$(var.ProjectVersion)"/>
         </Directory>
-      <?if $(var.CreateManufacturerDir) ~= True?></Directory><?endif?>
       </Directory>
     </Directory>
 
