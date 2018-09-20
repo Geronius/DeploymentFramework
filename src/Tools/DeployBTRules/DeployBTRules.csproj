@@ -65,13 +65,26 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Biztalk.RuleEngineExtensions">
-      <Name>Microsoft.Biztalk.RuleEngineExtensions</Name>
-      <HintPath>..\..\Program Files\Microsoft BizTalk Server 2004\Microsoft.Biztalk.RuleEngineExtensions.dll</HintPath>
+    <Reference Include="Microsoft.BizTalk.ExplorerOM, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\BizTalk_Project_Build_dlls.1.0.0.1\lib\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.RuleEngine">
-      <Name>Microsoft.RuleEngine</Name>
-      <HintPath>..\..\Program Files\Microsoft BizTalk Server 2004\Microsoft.RuleEngine.dll</HintPath>
+    <Reference Include="Microsoft.BizTalk.Operations, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\BizTalk_Project_Build_dlls.1.0.0.1\lib\Microsoft.BizTalk.Operations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Biztalk.RuleEngineExtensions, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\BizTalk_Project_Build_dlls.1.0.0.1\lib\Microsoft.Biztalk.RuleEngineExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.RuleEngine, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\BizTalk_Project_Build_dlls.1.0.0.1\lib\Microsoft.RuleEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BizTalk.CrossProcess, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\BizTalk_Project_Build_dlls.1.0.0.1\lib\Microsoft.XLANGs.BizTalk.CrossProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BizTalk.ProcessInterface, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\BizTalk_Project_Build_dlls.1.0.0.1\lib\Microsoft.XLANGs.BizTalk.ProcessInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SSOSettingsFileReader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b9585ffc9d454e4a, processorArchitecture=MSIL">
+      <HintPath>packages\BizTalk_Project_Build_dlls.1.0.0.1\lib\SSOSettingsFileReader.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -101,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
