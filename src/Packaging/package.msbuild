@@ -29,7 +29,7 @@
   </Target>
 
   <Target Name="BuildDocs" Condition="'$(AlwaysBuildDocs)' == 'True' Or !Exists('..\Documentation\DeploymentFrameworkForBizTalkDocs.chm')">
-    <Exec Command="&quot;$(MSBuildExtensionsPath)\..\IBE Software\HelpNDoc\Hnd4.exe&quot; ..\Documentation\Src\DeploymentFrameworkForBizTalkDocs.hnd /g /silent" />
+    <Exec Command="&quot;$(ProgramFiles)\IBE Software\HelpNDoc\Hnd4.exe&quot; ..\Documentation\Src\DeploymentFrameworkForBizTalkDocs.hnd /g" />
   </Target>
 
   <Target Name="BuildInstaller" DependsOnTargets="$(BuildInstallerDependsOn)">

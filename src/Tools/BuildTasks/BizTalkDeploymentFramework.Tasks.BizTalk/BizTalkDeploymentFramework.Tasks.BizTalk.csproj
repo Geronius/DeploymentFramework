@@ -34,26 +34,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.BizTalk.ExplorerOM, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\Microsoft BizTalk Server 2006\Developer Tools\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
+      <HintPath>..\packages\BizTalk_Project_Build_dlls.1.0.0\lib\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.BizTalk.Operations, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\Microsoft BizTalk Server 2006\Microsoft.BizTalk.Operations.dll</HintPath>
+      <HintPath>..\packages\BizTalk_Project_Build_dlls.1.0.0\lib\Microsoft.BizTalk.Operations.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Utilities" />
     <Reference Include="Microsoft.XLANGs.BizTalk.CrossProcess, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\Microsoft BizTalk Server 2006\Microsoft.XLANGs.BizTalk.CrossProcess.dll</HintPath>
+      <HintPath>..\packages\BizTalk_Project_Build_dlls.1.0.0\lib\Microsoft.XLANGs.BizTalk.CrossProcess.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.XLANGs.BizTalk.ProcessInterface, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\Microsoft BizTalk Server 2006\Microsoft.XLANGs.BizTalk.ProcessInterface.dll</HintPath>
+      <HintPath>..\packages\BizTalk_Project_Build_dlls.1.0.0\lib\Microsoft.XLANGs.BizTalk.ProcessInterface.dll</HintPath>
     </Reference>
     <Reference Include="SSOSettingsFileReader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b9585ffc9d454e4a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SSOSettingsFileImport\SSOSettingsFileReader\bin\Release\SSOSettingsFileReader.dll</HintPath>
+      <HintPath>..\packages\BizTalk_Project_Build_dlls.1.0.0\lib\SSOSettingsFileReader.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -85,6 +80,7 @@
     <Compile Include="UpdateSSOConfigItem.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Test.msbuild" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
