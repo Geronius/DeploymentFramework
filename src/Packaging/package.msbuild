@@ -10,7 +10,7 @@
     <Version>5_7_0</Version>
     <InstallerVersion>5.7.100.0</InstallerVersion>
     <ProductID>018C4B8A-B453-49DD-91AD-3B20D0D1D428</ProductID>
-	<AlwaysBuildDocs>True</AlwaysBuildDocs>
+	<AlwaysBuildDocs>False</AlwaysBuildDocs>
   </PropertyGroup>
   
   <PropertyGroup>
@@ -29,7 +29,7 @@
   </Target>
 
   <Target Name="BuildDocs" Condition="'$(AlwaysBuildDocs)' == 'True' Or !Exists('..\Documentation\DeploymentFrameworkForBizTalkDocs.chm')">
-    <Exec Command="&quot;..\Documentation\HelpNDoc\Hnd4.exe&quot; ..\Documentation\Src\DeploymentFrameworkForBizTalkDocs.hnd /g" />
+    <Exec Command="&quot;..\Documentation\HelpNDoc\Hnd4.exe&quot; ..\Documentation\Src\DeploymentFrameworkForBizTalkDocs.hnd /g /silent" />
   </Target>
 
   <Target Name="BuildInstaller" DependsOnTargets="$(BuildInstallerDependsOn)">
